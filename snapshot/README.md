@@ -5,7 +5,7 @@
 Pruned daily snapshot here: [https://okp4.westaking.io/okp4/snapshot/](https://okp4.westaking.io/okp4/snapshot/)
 
 ## Instruction
-```
+```bash
 # GET SNAPSHOT FILENAME
 SNAPSHOT_FILENANE=$(curl -s https://okp4.westaking.io/okp4/snapshot/  | egrep -o ">okp4.*.tar.lz4" | tr -d ">")
 
@@ -29,7 +29,7 @@ sudo systemctl start okp4
 
 ## state-sync server setup
 app.toml
-```
+```toml
 # Prune Strategy
 pruning = "custom"
 pruning-keep-every = 500
@@ -40,7 +40,7 @@ snapshot-keep-recent = 3
 ```
 
 ## Instruction
-```
+```bash
 SNAP_RPC="https://okp4.westaking.io:443"
 SNAP_INTERVAL=500
 
