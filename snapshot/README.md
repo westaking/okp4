@@ -59,7 +59,7 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"|" $HOME/.okp4d/con
 
 # ENABLE SNAPSHOT MANAGER
 sed -E -i "/snapshot-interval = /c\snapshot-interval = $SNAP_INTERVAL" $HOME/.okp4d/config/app.toml
-sed -E -i "/snapshot-keep-recent = /c\snapshot-interval = 3" $HOME/.okp4d/config/app.toml
+sed -E -i "/snapshot-keep-recent = /c\snapshot-keep-recent = 3" $HOME/.okp4d/config/app.toml
 
 # STOP CHAIN
 sudo systemctl stop okp4
